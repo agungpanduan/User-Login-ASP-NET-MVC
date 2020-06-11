@@ -1,0 +1,92 @@
+﻿@{string CurrentName = Convert.ToString(HttpContext.Current.Request.RequestContext.RouteData.Values["Controller"]);}
+@using System.Web.Optimization
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @*<script src="@Url.Content("~/Content/Bootstrap/js/jquery.min.js")" ></script>*@
+    <script src="@Url.Content("/Scripts/modernizr-2.5.3.js")" ></script>
+    <link rel="stylesheet" href="@Url.Content("~/Content/Bootstrap/css/bootstrap.css")" />
+    <script src="@Url.Content("~/Content/Bootstrap/js/bootstrap.js")" ></script>
+</head>
+<body style="padding-top: 70px;">
+    @*@if (CurrentName!="Login"){
+  *@<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    @Html.ActionLink("Whiteopen", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="navbar-collapse collapse">
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+    </ul>
+    </div>
+  </nav>
+    @*}*@
+  <div class="container body-content">
+    @RenderBody()
+    <hr />
+    @*<footer class="panel-footer">
+         @RenderSection("footer", true)
+    </footer>*@
+     @*@if (CurrentName!="Login"){
+    *@<footer class="panel-footer">
+        <div class="bg-secondary" style="height:100%">
+           <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-12 text-white">
+                            <div class="row p-3">
+                                <div class="col-md-6 col-12">
+                                    <p class="m-0">All Right Reserved 2020 - <a href="http://www.agungpanduan.com" target="_blank">agungpandun.com</a></p>
+                                </div>
+                                @*<div class="col-md-6 col-12 footer-icon text-right">
+                                    <i class="fa fa-twitter"></i>
+                                    <i class="fa fa-instagram"></i>
+                                    <i class="fa fa-pinterest"></i>
+                                    <i class="fa fa-linkedin"></i>
+                                    <i class="fa fa-youtube"></i>
+                                    <i class="fa fa-vimeo"></i>
+                                </div>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    @* }*@
+  </div>
+    
+    @RenderSection("scripts", required: false)
+   @* @Scripts.Render("~/bundles/jquery")*@
+    @*<script src="jquery-3.0.0.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>*@
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+@*<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>*@

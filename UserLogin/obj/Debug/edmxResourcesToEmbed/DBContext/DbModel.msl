@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
+  <Alias Key="Model" Value="DbModel" />
+  <Alias Key="Target" Value="DbModel.Store" />
+  <EntityContainerMapping CdmEntityContainer="DbModelContainer" StorageEntityContainer="DbModelStoreContainer">
+    <EntitySetMapping Name="UserMs">
+      <EntityTypeMapping TypeName="DbModel.UserM">
+        <MappingFragment StoreEntitySet="UserM">
+          <ScalarProperty Name="OTP" ColumnName="OTP" />
+          <ScalarProperty Name="ActivetionCode" ColumnName="ActivetionCode" />
+          <ScalarProperty Name="EmailVerification" ColumnName="EmailVerification" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
